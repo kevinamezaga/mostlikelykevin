@@ -7,7 +7,7 @@
 			{% if contact.newTab == true %}
 				{% set target = "_blank" %}
 			{% else %}
-				{% set target = "self" %}
+				{% set target = "" %}
 			{% endif %}
 			<a href="{{contact.profile}}" target="{{target}}"><i class="{{contact.icon}}"></i></a>&nbsp;&nbsp;
 			{% endfor %}
