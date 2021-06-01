@@ -78,6 +78,11 @@
 									<hr data-aos="fade" data-aos-delay="700" data-aos-once="true">
 									<h1>
 										{% for social in socials.all() %}
+											{% if social.newTab == true %}
+												{% set target = "_blank" %}
+											{% else %}
+												{% set target = "self" %}
+											{% endif %}
 											<a data-aos="fade" data-aos-delay="{{ 800 + (socialCount * 100)}}" data-aos-once="true" class="btn-lg btn-link-light" href="{{social.profile}}" target="_blank">
 												<i class="{{social.icon}}"></i>
 											</a>
