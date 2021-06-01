@@ -1,0 +1,15 @@
+contentColumnType: datetime
+fieldGroup: 0c3ec289-b821-4b18-9bb2-472f7707f45f # Career
+handle: startDate
+instructions: ''
+name: 'Start Date'
+searchable: false
+settings:
+  max: null
+  min: null
+  minuteIncrement: '30'
+  showDate: true
+  showTime: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Date

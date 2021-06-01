@@ -1,0 +1,114 @@
+{% extends "index" %}
+
+{% block extraJS %}{% endblock %}
+
+{% block pageTitle %}
+	<title>Career —
+		{{siteName}}</title>
+{% endblock %}
+
+{% block body %}
+	<section class="bg-primary main-padding" id="main-section">
+		<div class="container pt-5 pb-5">
+			<div class="row justify-content-center fullheight-element">
+				<div class="col-lg-7">
+					<h3>{{siteName | split(' ')[0]}}'s Career</h3>
+					<hr>
+					{% include('chunks/contactNav') %}
+					<div>
+						<a class="btn btn-outline-light" href="{{siteUrl}}">
+							<i class="fa fa-arrow-left"></i>&nbsp;&nbsp;Back Home</a>
+						<a class="btn btn-outline-light" href="{{siteUrl ~ 'projects'}}">
+							<i class="fas fa-project-diagram"></i>&nbsp;&nbsp;Projects</a>
+						<a class="btn btn-outline-light" href="{{siteUrl ~ 'skills'}}">
+							<i class="far fa-star"></i>&nbsp;&nbsp;Skills</a>
+					</div>
+					{% set careerItems = craft.entries.section('career') %}
+					{% for careerItem in careerItems.all() %}
+						<div>
+							<hr>
+							{% if 'mostlikelykevin.com' in careerItem.employerLink %}
+								{% set target = '' %}
+							{% else %}
+								{% set target = '_blank' %}
+							{% endif %}
+							<h5>
+								<span>
+									<i class="fa fa-bullseye"></i>
+								</span>&nbsp;&nbsp;<a href="{{careerItem.employerLink | default('') }}" target="{{target}}">{{careerItem.title}}</a>
+							</h5>
+							{% if careerItem.employedHere == true %}
+								{% set dateEnd = 'Present' %}
+							{% elseif careerItem.endDate != null %}
+								{% set dateEnd = careerItem.endDate | date('M Y') %}
+							{% endif %}
+							<p style="margin-left:1.8em;">
+								<strong>{{careerItem.startDate | date('M Y') }}
+									-
+									{{dateEnd}}</strong>
+							</p>
+							<hr class="half-hr">
+							<ul>
+								{% for position in careerItem.positionsHeld.orderBy('dateStarted desc').all() %}
+									<li>
+										<p class="mb-1">
+											<strong>{{position.jobTitle}}</strong>
+										</p>
+										{% if position.currentPosition == true %}
+											{% set dateEnd = 'Present' %}
+										{% else %}
+											{% set dateEnd = position.dateEnded | date('M Y') %}
+										{% endif %}
+										<p class="mb-1">{{careerItem.dateStarted | date('M Y') }}
+											-
+											{{dateEnd}}</p>
+										<p>
+											<small>{{position.jobDescription}}</small>
+										</p>
+									</li>
+								{% endfor %}
+							</ul>
+							<hr class="half-hr">
+							<a class="btn btn-outline-light" href="{{careerItem.url}}">
+								<i class="fa fa-briefcase"></i>&nbsp;&nbsp;Learn More</a>
+						</div>
+					{% endfor %}
+					{% for institution in information.education.all() %}
+						<div>
+							<hr>
+							{% if 'mostlikelykevin.com' in institution.institutionLink %}
+								{% set target = '' %}
+							{% else %}
+								{% set target = '_blank' %}
+							{% endif %}
+							<h5>
+								<span>
+									<i class="fa fa-bullseye"></i>
+								</span>&nbsp;&nbsp;<a href="{{institution.institutionLink | default('') }}" target="{{target}}">{{institution.institution}}</a>
+							</h5>
+							<h6 style="margin-left:2rem;">Class of {{institution.classOf}}</h6>
+							<hr class="half-hr">
+							<ul>
+								{% for program in institution.programs.orderBy('startDate desc').all() %}
+									<li>
+										<p class="mb-1">
+											<strong>{{program.programName}}</strong>
+										</p>
+										{% if program.currentProgram == true %}
+											{% set dateEnd = 'Present' %}
+										{% else %}
+											{% set dateEnd = program.endDate | date('M Y') %}
+										{% endif %}
+										<p class="mb-1">{{program.startDate | date('M Y') }}
+											-
+											{{dateEnd}}</p>
+									</li>
+								{% endfor %}
+							</ul>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}

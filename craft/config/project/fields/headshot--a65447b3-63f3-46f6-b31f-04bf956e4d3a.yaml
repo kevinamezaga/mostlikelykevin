@@ -1,0 +1,33 @@
+contentColumnType: string
+fieldGroup: cf6929c1-5142-4d00-ae42-d6cca8641957 # Home
+handle: headshot
+instructions: ''
+name: Headshot
+searchable: false
+settings:
+  allowSelfRelations: false
+  allowUploads: true
+  allowedKinds:
+    - image
+  defaultUploadLocationSource: 'volume:80ff6559-88e8-4b18-a5cc-9969eab5366e' # Headshot
+  defaultUploadLocationSubpath: ''
+  limit: '1'
+  localizeRelations: false
+  previewMode: thumbs
+  restrictFiles: '1'
+  selectionLabel: 'Select a Headshot'
+  showSiteMenu: false
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  singleUploadLocationSource: 'volume:80ff6559-88e8-4b18-a5cc-9969eab5366e' # Headshot
+  singleUploadLocationSubpath: ''
+  source: null
+  sources:
+    - 'volume:80ff6559-88e8-4b18-a5cc-9969eab5366e' # Headshot
+  targetSiteId: null
+  useSingleFolder: false
+  validateRelatedElements: true
+  viewMode: large
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

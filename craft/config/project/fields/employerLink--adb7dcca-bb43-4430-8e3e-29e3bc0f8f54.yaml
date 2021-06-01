@@ -1,0 +1,14 @@
+contentColumnType: string(255)
+fieldGroup: 0c3ec289-b821-4b18-9bb2-472f7707f45f # Career
+handle: employerLink
+instructions: ''
+name: 'Employer Link'
+searchable: false
+settings:
+  maxLength: '255'
+  placeholder: null
+  types:
+    - url
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Url

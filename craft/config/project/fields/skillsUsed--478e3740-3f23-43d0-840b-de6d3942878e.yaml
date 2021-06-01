@@ -1,0 +1,23 @@
+contentColumnType: string
+fieldGroup: 29bc93ae-77c4-4121-971d-657c5350c9ac # Projects
+handle: skillsUsed
+instructions: ''
+name: 'Skills Used'
+searchable: false
+settings:
+  allowLimit: false
+  allowMultipleSources: false
+  allowSelfRelations: false
+  branchLimit: ''
+  limit: null
+  localizeRelations: false
+  selectionLabel: 'Select Skills'
+  showSiteMenu: false
+  source: 'group:24efb0a7-e166-444b-90b5-e3330a2c072b' # Skills
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: true
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

@@ -1,0 +1,18 @@
+contentColumnType: text
+fieldGroup: 0c3ec289-b821-4b18-9bb2-472f7707f45f # Career
+handle: employerName
+instructions: ''
+name: 'Employer Name'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: 'Enter an Employer''s Name'
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

@@ -1,0 +1,18 @@
+contentColumnType: text
+fieldGroup: 08c3cece-baba-403b-b910-bcf82581a06b # Globals
+handle: homeBase
+instructions: ''
+name: 'Home Base'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: 'Enter your City...'
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

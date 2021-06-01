@@ -1,0 +1,9 @@
+baseUrl: $PRIMARY_SITE_URL
+enabled: true
+handle: default
+hasUrls: true
+language: en-US
+name: 'Kevin Amézaga'
+primary: true
+siteGroup: 55fed755-ee36-4314-8739-83b8c64ce8e5 # Kevin Amézaga
+sortOrder: 1

@@ -1,0 +1,49 @@
+fieldLayouts:
+  13ca6426-b663-47ad-8fa1-6e053b99ecd3:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: ''
+            label: Skill
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            warning: null
+            width: 50
+          -
+            fieldUid: c34ea056-2f00-47e1-a7d4-0e85ea072426 # Skill Level
+            instructions: ''
+            label: ''
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+        name: Content
+        sortOrder: 1
+handle: skills
+name: Skills
+siteSettings:
+  3b31166f-6db9-429f-8ed6-0c2c66424a07: # Kevin Amézaga
+    hasUrls: true
+    template: skill
+    uriFormat: 'skills/{slug}'
+structure:
+  maxLevels: null
+  uid: 3996360b-a660-42b3-a908-97b47e8e4528

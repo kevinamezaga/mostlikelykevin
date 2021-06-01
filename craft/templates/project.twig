@@ -1,0 +1,59 @@
+{% extends "index" %}
+
+{% block extraJS %}{% endblock %}
+
+{% block pageTitle %}
+	<title>{{entry.title}} — {{siteName}}</title>
+{% endblock %}
+
+{% block body %}
+	<section class="bg-primary main-padding" id="main-section">
+		<div class="container pt-5 pb-5">
+			<div class="row justify-content-center fullheight-element">
+				<div class="col-lg-9">
+					{% include('chunks/contactNav') %}
+					<div>
+						<a class="btn btn-outline-light" href="{{siteUrl ~ 'projects'}}">
+							<i class="fa fa-arrow-left"></i>&nbsp;&nbsp;Back to Projects</a>
+						<a class="btn btn-outline-light" href="{{siteUrl}}">
+							<i class="fa fa-home"></i>&nbsp;&nbsp;Home</a>
+						<a class="btn btn-outline-light" href="{{siteUrl ~ 'projects'}}">
+							<i class="fas fa-briefcase"></i>&nbsp;&nbsp;Career</a>
+						<a class="btn btn-outline-light" href="{{siteUrl ~ 'skills'}}">
+							<i class="far fa-star"></i>&nbsp;&nbsp;Skills</a>
+					</div>
+					<div>
+						<hr>
+						{% if 'mostlikelykevin.com' in entry.projectLink %}
+							{% set target = '' %}
+						{% else %}
+							{% set target = '_blank' %}
+						{% endif %}
+						<img class="img-fluid rounded shadow-lg float-lg-end" style="max-width:400px;" src="{{entry.projectFeaturedImage.one().getUrl({mode:'crop',width:'720',format:'png'})}}">
+                        <h3>
+							<span>
+								<i class="fa fa-bullseye"></i>
+							</span>&nbsp;&nbsp;<a href="{{entry.projectLink | default('') }}" target="{{target}}">{{entry.title}}</a>
+						</h3>
+						<p style="margin-left:2.85em;">
+							<strong>{{entry.dateCompleted | date('M Y') }}</strong>
+						</p>
+                        <hr>
+                        <div style="line-height:2.25em;">
+                            <span tag-item>
+                                <i class="fas fa-tags"></i>
+                            </span>
+                            {% for skill in entry.skillsUsed.all() %}
+                                <a class="tag-item" href="{{skill.url}}">{{skill.title}}</a>
+                            {% endfor %}
+                        </div>
+                        <hr>
+                        {{entry.projectDescription | raw}}
+                        <hr>
+                        <a class="btn btn-outline-light" href="{{entry.projectLink | default('') }}" target="{{target}}"><i class="fa fa-search"></i>&nbsp;&nbsp;View Project Live</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}

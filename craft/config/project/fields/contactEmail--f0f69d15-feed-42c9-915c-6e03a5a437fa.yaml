@@ -1,0 +1,14 @@
+contentColumnType: string(255)
+fieldGroup: 08c3cece-baba-403b-b910-bcf82581a06b # Globals
+handle: contactEmail
+instructions: ''
+name: 'Contact Email'
+searchable: false
+settings:
+  maxLength: '255'
+  placeholder: null
+  types:
+    - email
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Url

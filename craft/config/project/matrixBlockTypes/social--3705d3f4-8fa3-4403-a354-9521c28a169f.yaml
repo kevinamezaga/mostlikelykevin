@@ -1,0 +1,64 @@
+field: 34f7a287-b0e4-4aad-9545-5ac5aad23d61 # Socials
+fieldLayouts:
+  f570fc0e-b1ba-4773-b2f2-9a5715058dbd:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 514afd6c-eb02-47a2-9664-e20e7d9d120d # Social Link
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 0ac77457-0475-43b8-a97b-24ec09eca6bd # Social Icon Class
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  0ac77457-0475-43b8-a97b-24ec09eca6bd: # Social Icon Class
+    contentColumnType: text
+    fieldGroup: null
+    handle: icon
+    instructions: 'Using FontAwesome''s free gallery (https://fontawesome.com/v5.15/icons?d=gallery&p=2)'
+    name: 'Social Icon Class'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: 'Enter an Icon Class...'
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  514afd6c-eb02-47a2-9664-e20e7d9d120d: # Social Link
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: profile
+    instructions: ''
+    name: 'Social Link'
+    searchable: false
+    settings:
+      maxLength: '255'
+      placeholder: null
+      types:
+        - url
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url
+handle: social
+name: social
+sortOrder: 1

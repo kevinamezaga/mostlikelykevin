@@ -1,0 +1,14 @@
+contentColumnType: string(255)
+fieldGroup: 29bc93ae-77c4-4121-971d-657c5350c9ac # Projects
+handle: projectLink
+instructions: ''
+name: 'Project Link'
+searchable: false
+settings:
+  maxLength: '255'
+  placeholder: null
+  types:
+    - url
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Url

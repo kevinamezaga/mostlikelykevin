@@ -1,0 +1,6 @@
+siteUid: null
+sortOrder: 2
+template: projects
+uriParts:
+  - projects
+uriPattern: projects

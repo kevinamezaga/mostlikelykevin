@@ -1,0 +1,111 @@
+field: 17b942ee-1791-4285-a28d-7a4b259c51c6 # Industries
+fieldLayouts:
+  71e733a8-9220-437f-a427-37c3197425a9:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: bb4377b6-9e6b-4300-b899-bea484d22550 # Industry Title
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: c759002c-f56e-4931-a20a-c74c1f9dcedf # Industry Image
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: 3e27daa8-9295-440b-aef0-bf4814d3b33d # Industry Anchor ID
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  3e27daa8-9295-440b-aef0-bf4814d3b33d: # Industry Anchor ID
+    contentColumnType: text
+    fieldGroup: null
+    handle: industryAnchorId
+    instructions: 'The ID the JavaScript will use to find your industry and apply the image.'
+    name: 'Industry Anchor ID'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  bb4377b6-9e6b-4300-b899-bea484d22550: # Industry Title
+    contentColumnType: text
+    fieldGroup: null
+    handle: industryTitle
+    instructions: ''
+    name: 'Industry Title'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: 'Enter an Industry...'
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  c759002c-f56e-4931-a20a-c74c1f9dcedf: # Industry Image
+    contentColumnType: string
+    fieldGroup: null
+    handle: industryImage
+    instructions: ''
+    name: 'Industry Image'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:80ff6559-88e8-4b18-a5cc-9969eab5366e' # Headshot
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      previewMode: thumbs
+      restrictFiles: '1'
+      selectionLabel: 'Select an Image...'
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:80ff6559-88e8-4b18-a5cc-9969eab5366e' # Headshot
+      singleUploadLocationSubpath: ''
+      source: null
+      sources:
+        - 'volume:1bc0ecdd-c6d1-4537-98fc-2a0f67af9ccd' # User Styling
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: true
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: industry
+name: Industry
+sortOrder: 1

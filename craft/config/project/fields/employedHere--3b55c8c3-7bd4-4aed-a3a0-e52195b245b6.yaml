@@ -1,0 +1,13 @@
+contentColumnType: boolean
+fieldGroup: 0c3ec289-b821-4b18-9bb2-472f7707f45f # Career
+handle: employedHere
+instructions: ''
+name: 'Currently Employed Here'
+searchable: true
+settings:
+  default: false
+  offLabel: 'No'
+  onLabel: 'Yes'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

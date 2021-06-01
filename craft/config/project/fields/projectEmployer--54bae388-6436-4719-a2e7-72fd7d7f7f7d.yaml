@@ -1,0 +1,21 @@
+contentColumnType: string
+fieldGroup: 29bc93ae-77c4-4121-971d-657c5350c9ac # Projects
+handle: projectEmployer
+instructions: 'The employer this project was created for (if applicable)...'
+name: 'Project Employer'
+searchable: false
+settings:
+  allowSelfRelations: false
+  limit: '1'
+  localizeRelations: false
+  selectionLabel: 'Select an Employer'
+  showSiteMenu: false
+  source: null
+  sources:
+    - 'section:f850efb0-88f5-435a-a231-ba9001554ff2' # Career
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

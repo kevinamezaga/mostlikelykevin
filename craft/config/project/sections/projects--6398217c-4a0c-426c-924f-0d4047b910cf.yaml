@@ -1,0 +1,14 @@
+enableVersioning: true
+handle: projects
+name: Projects
+propagationMethod: all
+siteSettings:
+  3b31166f-6db9-429f-8ed6-0c2c66424a07: # Kevin Amézaga
+    enabledByDefault: true
+    hasUrls: true
+    template: project
+    uriFormat: 'projects/{slug}'
+structure:
+  maxLevels: null
+  uid: 716c6df3-1096-4df4-b747-ea322c7c6d70
+type: structure

@@ -1,0 +1,6 @@
+siteUid: null
+sortOrder: 3
+template: skills
+uriParts:
+  - skills
+uriPattern: skills

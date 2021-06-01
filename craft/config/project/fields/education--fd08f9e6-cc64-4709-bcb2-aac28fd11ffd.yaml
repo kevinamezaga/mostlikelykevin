@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: 08c3cece-baba-403b-b910-bcf82581a06b # Globals
+handle: education
+instructions: ''
+name: Education
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_education}}'
+  maxBlocks: ''
+  minBlocks: ''
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

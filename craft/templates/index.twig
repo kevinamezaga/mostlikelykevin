@@ -1,0 +1,96 @@
+<html>
+	<head>
+		{% block pageTitle %}
+			<title>{{siteName}}</title>
+		{% endblock %}
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+		<link rel="icon" type="image/png" sizes="16x16" href="{{siteUrl ~ 'assets/img/favicons/favicon-16px.png'}}">
+		<link rel="icon" type="image/png" sizes="32x32" href="{{siteUrl ~ 'assets/img/favicons/favicon-32px.png'}}">
+		<link rel="icon" type="image/png" sizes="512x512" href="{{siteUrl ~ 'assets/img/favicons/favicon-64px.png'}}">
+		<link rel="icon" type="image/png" sizes="512x512" href="{{siteUrl ~ 'assets/img/favicons/favicon-512px.png'}}">
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+		<link rel="stylesheet" href="{{siteUrl}}assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="{{siteUrl}}assets/css/styles.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+	</head>
+	<body>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script>
+			AOS.init();
+		</script>
+
+		{% set industries = information.industries %}
+		{% set industryCount = industries.count() %}
+		{% set industryLoopCount = 1 %}
+
+		{% block body %}
+			<section class="bg-primary" id="main-section">
+				<div id="color-overlay">
+					<div class="container">
+						<div class="row align-items-center justify-content-center fullheight-element">
+							<div class="col-lg-5 text-center" data-aos="fade-up" data-aos-once="true">
+								<img data-aos="zoom-in" data-aos-delay="300" data-aos-once="true" class="img-fluid" style="max-width:150px;" src="{{ entry.headshot.one().getUrl({mode:'crop',width:'250',format:'png'}) | default('assets/img/portraits/kevin-headshot-v2-sized-down.png') }}">
+								<h2 class="mt-2">{{siteName}}</h2>
+								{% set firstJobStart = craft.entries.section('career').orderBy('startDate asc').one().startDate | default(date('today')) %}
+								{% set daysSinceFirstJob = date('today').diff(firstJobStart) %}
+								{% set daysSinceFirstJob = daysSinceFirstJob.days %}
+								<p>
+									<strong>{{daysSinceFirstJob}}</strong>
+									days on the job</p>
+								<div class="mt-1 mb-3">
+									<a data-aos="flip-right" data-aos-delay="400" data-aos-once="true" class="btn btn-outline-light" href="{{siteUrl ~ 'career'}}">
+										<i class="fa fa-briefcase"></i>&nbsp;&nbsp;Career</a>
+									<a data-aos="flip-right" data-aos-delay="500" data-aos-once="true" class="btn btn-outline-light" href="{{siteUrl ~ 'projects'}}">
+										<i class="fa fa-project-diagram"></i>&nbsp;&nbsp;Projects</a>
+									<a data-aos="flip-right" data-aos-delay="600" data-aos-once="true" class="btn btn-outline-light" href="{{siteUrl ~ 'skills'}}">
+										<i class="far fa-star"></i>&nbsp;&nbsp;Skills</a>
+								</div>
+								<p>
+									{% if industryCount != 0 %}
+										{% for industry in industries.all() %}
+											<a id="{{industry.industryAnchorId}}">{{industry.industryTitle}}</a>
+											{% if industryLoopCount != industryCount %}
+												&nbsp;&nbsp;&#124;&nbsp;&nbsp;
+											{% endif %}
+											{% set industryLoopCount = industryLoopCount + 1 %}
+										{% endfor %}
+									{% endif %}
+								</p>
+								<div class="mt-4 mb-4">
+									{% for award in information.awards.all() %}
+										<p>
+											<a class="tag-item" href="{{award.linkToAward}}" target="_blank">
+												<i class="fa fa-trophy"></i>&nbsp;&nbsp;{{award.year}}
+												{{award.awardName}}</a>
+										</p>
+									{% endfor %}
+								</div>
+								<p>
+									<small>From
+										<a id="home-base-link">{{information.homeBase | default('home') }}</a>
+										with &lt;3</small>
+								</p>
+								{% set socials = information.socials %}
+
+								{% if socials.count() > 0 %}
+									{% set socialCount = 1 %}
+									<hr data-aos="fade" data-aos-delay="700" data-aos-once="true">
+									<h1>
+										{% for social in socials.all() %}
+											<a data-aos="fade" data-aos-delay="{{ 800 + (socialCount * 100)}}" data-aos-once="true" class="btn-lg btn-link-light" href="{{social.profile}}" target="_blank">
+												<i class="{{social.icon}}"></i>
+											</a>
+											{% set socialCount = socialCount + 2 %}
+										{% endfor %}
+									</h1>
+								{% endif %}
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		{% endblock %}
+	</body>
+</html></section><script src="{{siteUrl}}assets/js/bootstrap.min.js"></script>{% block extraJS %}
+{% include('chunks/homeFunScript') %}{% endblock %}</body></html>
