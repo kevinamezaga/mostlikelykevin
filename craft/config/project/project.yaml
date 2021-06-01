@@ -1,0 +1,27 @@
+dateModified: 1622501098
+email:
+  fromEmail: kevin@mostikelykevin.com
+  fromName: 'Most Likely Kevin'
+  transportType: craft\mail\transportadapters\Sendmail
+plugins:
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  super-table:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.2.1
+system:
+  edition: solo
+  live: true
+  name: 'Kevin Amézaga'
+  retryDuration: null
+  schemaVersion: 3.6.8
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

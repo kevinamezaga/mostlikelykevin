@@ -1,0 +1,56 @@
+{% extends 'index' %}
+
+{% block pageTitle %}
+	<title>Projects —
+		{{siteName}}</title>
+{% endblock %}
+
+{% block extraJS %}{% endblock %}
+
+{% block body %}
+	<section class="bg-primary main-padding" id="main-section">
+		<div class="container">
+			<div class="row justify-content-center align-items-center fullheight-element">
+				<div class="col-xl-8">
+					<h3>{{siteName | split(' ')[0]}}'s Projects</h3>
+					<hr>
+					{% include('chunks/contactNav') %}
+					<div>
+						<a class="btn btn-outline-light" href="{{siteUrl}}">
+							<i class="fa fa-arrow-left"></i>&nbsp;&nbsp;Back Home</a>
+						<a class="btn btn-outline-light" href="{{siteUrl ~ 'career'}}">
+							<i class="fa fa-briefcase"></i>&nbsp;&nbsp;Career</a>
+						<a class="btn btn-outline-light" href="{{siteUrl ~ 'skills'}}">
+							<i class="far fa-star"></i>&nbsp;&nbsp;Skills</a>
+					</div>
+					<hr>
+					{% for project in craft.entries.section('projects').all() %}
+						<div class="row justify-content-center align-items-center mt-5">
+							<div class="col-lg-5">
+								<a href="{{project.url}}"><img class="img-fluid rounded project-img-feature" src="{{project.projectFeaturedImage.one().getUrl({mode:'crop',width:'720',height:'480',format:'png'})}}"></a>
+							</div>
+							<div class="col-lg-7">
+								<div style="font-size:12px;margin-bottom:1em;"></div>
+								<div style="line-height:2.25em;">
+									<span tag-item>
+										<i class="fas fa-tags"></i>
+									</span>
+									{% for skill in project.skillsUsed.all() %}
+										<a class="tag-item" href="{{skill.url}}">{{skill.title}}</a>
+									{% endfor %}
+								</div>
+								<h2 class="mt-2">{{project.title}}</h2>
+								<h6>{{project.dateCompleted | date('M Y') }}
+									{{'for ' ~ project.projectEmployer.one().title | default('practice')}}</h6>
+								<hr>
+								<p class="text-truncate">{{project.projectDescription | slice(0,200) | striptags() }}</p>
+								<a class="btn btn-outline-light" href="{{project.url}}">
+									<i class="fa fa-search"></i>&nbsp;&nbsp;Learn More</a>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}

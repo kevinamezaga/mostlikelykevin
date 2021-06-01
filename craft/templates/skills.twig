@@ -1,0 +1,56 @@
+{% extends 'index' %}
+
+{% block pageTitle %}
+	<title>Skills —
+		{{siteName}}</title>
+{% endblock %}
+
+{% block extraJS %}{% endblock %}
+
+{% block body %}
+	<section class="bg-primary main-padding" id="main-section">
+		<div class="container">
+			<div class="row justify-content-center align-items-center fullheight-element">
+				<div class="col-xl-10">
+					{% include('chunks/contactNav') %}
+					<div>
+						<a class="btn btn-outline-light" href="{{siteUrl}}">
+							<i class="fa fa-arrow-left"></i>&nbsp;&nbsp;Back Home</a>
+						<a class="btn btn-outline-light" href="{{siteUrl ~ 'career'}}">
+							<i class="fa fa-briefcase"></i>&nbsp;&nbsp;Career</a>
+						<a class="btn btn-outline-light" href="{{siteUrl ~ 'projects'}}">
+							<i class="fas fa-project-diagram"></i>&nbsp;&nbsp;Projects</a>
+					</div>
+					<hr>
+					<div class="row justify-content-center align-items-center">
+						{% for skill in craft.categories.group('skills').all() %}
+							<div class="col-lg-4 mt-5 text-center">
+								<h3 class="mb-3">{{skill.title}}</h3>
+
+								<div>
+									{% set notSkilled = 4 - skill.skillLevel %}
+									{% for star in 1..skill.skillLevel %}
+										<span class="ml-1 mr-1">
+											<i class="fa fa-star"></i>
+										</span>
+									{% endfor %}
+									{% if skill.skillLevel < 5 %}
+										{% for star in 0..notSkilled %}
+											<span class="ml-1 mr-1">
+												<i class="far fa-star"></i>
+											</span>
+										{% endfor %}
+									{% endif %}
+								</div>
+								<div>
+									<a class="btn btn-outline-light mt-3" href="{{skill.url}}">
+										<i class="fas fa-project-diagram"></i>&nbsp;&nbsp;Browse Projects</a>
+								</div>
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}

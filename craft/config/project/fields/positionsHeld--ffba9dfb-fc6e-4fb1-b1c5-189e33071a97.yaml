@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: 0c3ec289-b821-4b18-9bb2-472f7707f45f # Career
+handle: positionsHeld
+instructions: ''
+name: 'Positions Held'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_positionsheld}}'
+  maxBlocks: ''
+  minBlocks: '1'
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

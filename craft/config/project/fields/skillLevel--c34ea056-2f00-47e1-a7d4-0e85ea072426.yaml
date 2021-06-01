@@ -1,0 +1,19 @@
+contentColumnType: smallint(1)
+fieldGroup: 8e289fe4-19fb-4d8c-b4ca-8cca28ba25cc # Skills
+handle: skillLevel
+instructions: 'Your Level with this skill. Scale from 1-5.'
+name: 'Skill Level'
+searchable: false
+settings:
+  decimals: 0
+  defaultValue: '1'
+  max: '5'
+  min: '1'
+  prefix: null
+  previewCurrency: ''
+  previewFormat: decimal
+  size: null
+  suffix: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Number

@@ -1,0 +1,141 @@
+field: ffba9dfb-fc6e-4fb1-b1c5-189e33071a97 # Positions Held
+fieldLayouts:
+  2722a3c9-cf14-4f72-8419-7363f929fe90:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: d8e3a7bc-6581-4619-a36a-76f5d3c96b85 # Job Title
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 9766e3a1-36f2-43ec-9cbd-f02862d06a2b # Current Position
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 0eb10e24-b450-4524-960c-4f16b20eaf56 # Date Started
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: 03352428-1dd6-4ceb-8092-abf44d88bace # Date Ended
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: bb7621ac-92be-47d1-824f-9e147e964432 # Job Description
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  0eb10e24-b450-4524-960c-4f16b20eaf56: # Date Started
+    contentColumnType: datetime
+    fieldGroup: null
+    handle: dateStarted
+    instructions: ''
+    name: 'Date Started'
+    searchable: false
+    settings:
+      max: null
+      min: null
+      minuteIncrement: '30'
+      showDate: true
+      showTime: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Date
+  9766e3a1-36f2-43ec-9cbd-f02862d06a2b: # Current Position
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: currentPosition
+    instructions: ''
+    name: 'Current Position'
+    searchable: false
+    settings:
+      default: false
+      offLabel: 'No'
+      onLabel: 'Yes'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+  03352428-1dd6-4ceb-8092-abf44d88bace: # Date Ended
+    contentColumnType: datetime
+    fieldGroup: null
+    handle: dateEnded
+    instructions: ''
+    name: 'Date Ended'
+    searchable: false
+    settings:
+      max: null
+      min: null
+      minuteIncrement: '30'
+      showDate: true
+      showTime: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Date
+  bb7621ac-92be-47d1-824f-9e147e964432: # Job Description
+    contentColumnType: text
+    fieldGroup: null
+    handle: jobDescription
+    instructions: ''
+    name: 'Job Description'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '2'
+      multiline: '1'
+      placeholder: 'Enter a Job Description...'
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  d8e3a7bc-6581-4619-a36a-76f5d3c96b85: # Job Title
+    contentColumnType: text
+    fieldGroup: null
+    handle: jobTitle
+    instructions: ''
+    name: 'Job Title'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: position
+name: Position
+sortOrder: 1

@@ -1,0 +1,14 @@
+enableVersioning: true
+handle: career
+name: Career
+propagationMethod: all
+siteSettings:
+  3b31166f-6db9-429f-8ed6-0c2c66424a07: # Kevin Amézaga
+    enabledByDefault: true
+    hasUrls: true
+    template: careerItem
+    uriFormat: 'career/{slug}'
+structure:
+  maxLevels: 1
+  uid: 95613835-a441-44b1-bdb4-63fc811d5b27
+type: structure

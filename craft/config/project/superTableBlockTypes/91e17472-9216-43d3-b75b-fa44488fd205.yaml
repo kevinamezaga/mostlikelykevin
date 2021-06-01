@@ -1,0 +1,118 @@
+field: a05576f4-a119-4e08-aa16-a7801d2aa7e8 # Awards
+fieldLayouts:
+  3521de4d-3b4a-4a14-b324-b502f8f01669:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: a4c9e76e-599c-40ba-86c3-0c6491b6dd01 # Award Name
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: e2e46656-73f6-4887-9745-56908dcbeaf7 # Issuer
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: cdecb4bd-39c5-49e7-b9c0-4300f81c3405 # Year
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: e36699f8-e8ad-4ac9-b59a-63e868a118ca # Link to Award
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  a4c9e76e-599c-40ba-86c3-0c6491b6dd01: # Award Name
+    contentColumnType: text
+    fieldGroup: null
+    handle: awardName
+    instructions: ''
+    name: 'Award Name'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  cdecb4bd-39c5-49e7-b9c0-4300f81c3405: # Year
+    contentColumnType: integer(10)
+    fieldGroup: null
+    handle: year
+    instructions: ''
+    name: Year
+    searchable: false
+    settings:
+      decimals: 0
+      defaultValue: null
+      max: null
+      min: '0'
+      prefix: null
+      previewCurrency: ''
+      previewFormat: none
+      size: null
+      suffix: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Number
+  e2e46656-73f6-4887-9745-56908dcbeaf7: # Issuer
+    contentColumnType: text
+    fieldGroup: null
+    handle: issuer
+    instructions: ''
+    name: Issuer
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  e36699f8-e8ad-4ac9-b59a-63e868a118ca: # Link to Award
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: linkToAward
+    instructions: ''
+    name: 'Link to Award'
+    searchable: false
+    settings:
+      maxLength: '255'
+      placeholder: null
+      types:
+        - url
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url

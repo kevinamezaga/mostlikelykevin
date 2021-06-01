@@ -1,0 +1,31 @@
+<script>
+
+	{% if industryCount != 0 %}
+{% for industry in industries.all() %}
+document.getElementById("{{ industry.industryAnchorId }}").addEventListener("mouseover", function () {
+document.getElementById("main-section").style.backgroundImage = "url( {{ industry.industryImage.one().getUrl({mode:'crop',width:'720',height:'480',format:'png'}) }})";
+document.getElementById("color-overlay").style.backgroundColor = "rgba(69,119,188,0.75)";
+
+}, false);{% endfor %}
+{% endif %}
+
+{% if industryCount != 0 %}
+{% for industry in industries.all() %}
+document.getElementById("{{ industry.industryAnchorId }}").addEventListener("mouseout", function () {
+document.getElementById("main-section").style.backgroundImage = "";
+
+}, false);{% endfor %}
+{% endif %}
+
+{% if information.homeBaseImage != null %}
+	document.getElementById("home-base-link").addEventListener("mouseover", function () {
+	document.getElementById("main-section").style.backgroundImage = "url( {{ information.homeBaseImage.one().getUrl({mode:'crop',width:'720',height:'480',format:'png'}) | default('')}})";
+	document.getElementById("color-overlay").style.backgroundColor = "rgba(69,119,188,0.75)";
+}, false);
+
+	document.getElementById("home-base-link").addEventListener("mouseout", function () {
+	document.getElementById("main-section").style.backgroundImage = "";
+}, false);
+{% endif %}
+
+</script>

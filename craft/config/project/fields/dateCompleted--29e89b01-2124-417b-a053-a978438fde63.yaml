@@ -1,0 +1,15 @@
+contentColumnType: datetime
+fieldGroup: 29bc93ae-77c4-4121-971d-657c5350c9ac # Projects
+handle: dateCompleted
+instructions: ''
+name: 'Date Completed'
+searchable: false
+settings:
+  max: null
+  min: null
+  minuteIncrement: '30'
+  showDate: true
+  showTime: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Date

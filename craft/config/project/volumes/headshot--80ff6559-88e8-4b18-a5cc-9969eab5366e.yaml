@@ -1,0 +1,40 @@
+fieldLayouts:
+  8e928a41-de50-44e9-9d58-6b8901652452:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\AssetTitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: headshot
+hasUrls: true
+name: Headshot
+settings:
+  path: '@webroot/assets/img/portraits'
+sortOrder: 1
+titleTranslationKeyFormat: null
+titleTranslationMethod: null
+type: craft\volumes\Local
+url: '@web/assets/img/portraits'

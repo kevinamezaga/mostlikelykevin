@@ -1,0 +1,110 @@
+field: 7943ca57-a7d0-47f4-9b97-e9f3635b8f5a # Programs
+fieldLayouts:
+  4575a4fd-a8d7-482d-a2e3-1876c8f0b629:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: eb24ad07-b0e9-44b8-8aa9-8270951139f3 # Program Name
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 0739cf2d-0443-470b-8e35-5dc4cfc7c7f9 # Current Program?
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 71e750a6-f5f4-435c-b40d-d4160bb61987 # Start Date
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 1239e31c-2685-42f8-a391-a5964432bb5e # End Date
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  71e750a6-f5f4-435c-b40d-d4160bb61987: # Start Date
+    contentColumnType: datetime
+    fieldGroup: null
+    handle: startDate
+    instructions: ''
+    name: 'Start Date'
+    searchable: false
+    settings:
+      max: null
+      min: null
+      minuteIncrement: '30'
+      showDate: true
+      showTime: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Date
+  0739cf2d-0443-470b-8e35-5dc4cfc7c7f9: # Current Program?
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: currentProgram
+    instructions: ''
+    name: 'Current Program?'
+    searchable: false
+    settings:
+      default: false
+      offLabel: 'No'
+      onLabel: 'Yes'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+  1239e31c-2685-42f8-a391-a5964432bb5e: # End Date
+    contentColumnType: datetime
+    fieldGroup: null
+    handle: endDate
+    instructions: ''
+    name: 'End Date'
+    searchable: false
+    settings:
+      max: null
+      min: null
+      minuteIncrement: '30'
+      showDate: true
+      showTime: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Date
+  eb24ad07-b0e9-44b8-8aa9-8270951139f3: # Program Name
+    contentColumnType: text
+    fieldGroup: null
+    handle: programName
+    instructions: ''
+    name: 'Program Name'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: 'Enter a Program Name...'
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText

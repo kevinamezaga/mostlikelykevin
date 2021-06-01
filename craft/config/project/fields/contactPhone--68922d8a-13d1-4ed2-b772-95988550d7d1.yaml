@@ -1,0 +1,18 @@
+contentColumnType: string(68)
+fieldGroup: 08c3cece-baba-403b-b910-bcf82581a06b # Globals
+handle: contactPhone
+instructions: ''
+name: 'Contact Phone'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: 17
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: 'Enter a Phone Number...'
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

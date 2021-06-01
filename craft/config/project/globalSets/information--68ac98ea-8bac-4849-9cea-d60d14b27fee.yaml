@@ -1,0 +1,85 @@
+fieldLayouts:
+  ea0a4adf-5d90-4df3-b9f0-7b8536e9def3:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 045d0d4b-1486-46b3-b691-134245774d9e # Home Base
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: 7c4a85e9-1df4-4417-904e-99070c71323a # Home Base Image
+            instructions: ''
+            label: ''
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: f0f69d15-feed-42c9-915c-6e03a5a437fa # Contact Email
+            instructions: ''
+            label: ''
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 68922d8a-13d1-4ed2-b772-95988550d7d1 # Contact Phone
+            instructions: ''
+            label: ''
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 34f7a287-b0e4-4aad-9545-5ac5aad23d61 # Socials
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'Contact Info'
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 17b942ee-1791-4285-a28d-7a4b259c51c6 # Industries
+            instructions: ''
+            label: ''
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: fd08f9e6-cc64-4709-bcb2-aac28fd11ffd # Education
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: a05576f4-a119-4e08-aa16-a7801d2aa7e8 # Awards
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'Career Info'
+        sortOrder: 2
+handle: information
+name: Information

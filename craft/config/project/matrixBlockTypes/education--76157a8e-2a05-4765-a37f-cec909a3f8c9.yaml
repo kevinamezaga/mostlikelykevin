@@ -1,0 +1,174 @@
+field: fd08f9e6-cc64-4709-bcb2-aac28fd11ffd # Education
+fieldLayouts:
+  0e5511c0-5070-4090-9dc6-85ea7da90c93:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 868b40f0-6987-4908-8663-0b8de869a748 # Institution
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: 4d7939e7-a17f-4264-8b3b-b8ca6bab0ade # Institution Link
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: 0d32cc7a-9eec-4aea-a674-651b6f0590b2 # Current Student
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: bbf3d555-b149-405b-abb7-e1ebf89e141d # Class Of
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: 7943ca57-a7d0-47f4-9b97-e9f3635b8f5a # Programs
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  0d32cc7a-9eec-4aea-a674-651b6f0590b2: # Current Student
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: currentStudent
+    instructions: ''
+    name: 'Current Student'
+    searchable: false
+    settings:
+      default: false
+      offLabel: 'No'
+      onLabel: 'Yes'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+  4d7939e7-a17f-4264-8b3b-b8ca6bab0ade: # Institution Link
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: institutionLink
+    instructions: ''
+    name: 'Institution Link'
+    searchable: false
+    settings:
+      maxLength: '255'
+      placeholder: null
+      types:
+        - url
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url
+  868b40f0-6987-4908-8663-0b8de869a748: # Institution
+    contentColumnType: text
+    fieldGroup: null
+    handle: institution
+    instructions: ''
+    name: Institution
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: 'Enter an Institution Name...'
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  7943ca57-a7d0-47f4-9b97-e9f3635b8f5a: # Programs
+    contentColumnType: string
+    fieldGroup: null
+    handle: programs
+    instructions: ''
+    name: Programs
+    searchable: false
+    settings:
+      columns:
+        __assoc__:
+          -
+            - eb24ad07-b0e9-44b8-8aa9-8270951139f3 # Program Name
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 0739cf2d-0443-470b-8e35-5dc4cfc7c7f9 # Current Program?
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 71e750a6-f5f4-435c-b40d-d4160bb61987 # Start Date
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 1239e31c-2685-42f8-a391-a5964432bb5e # End Date
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_4_programs}}'
+      fieldLayout: row
+      maxRows: ''
+      minRows: '1'
+      placeholderKey: null
+      propagationMethod: all
+      selectionLabel: ''
+      staticField: ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: verbb\supertable\fields\SuperTableField
+  bbf3d555-b149-405b-abb7-e1ebf89e141d: # Class Of
+    contentColumnType: smallint(4)
+    fieldGroup: null
+    handle: classOf
+    instructions: ''
+    name: 'Class Of'
+    searchable: false
+    settings:
+      decimals: 0
+      defaultValue: null
+      max: '3000'
+      min: '1900'
+      prefix: null
+      previewCurrency: ''
+      previewFormat: none
+      size: null
+      suffix: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Number
+handle: education
+name: Education
+sortOrder: 1
