@@ -4,7 +4,12 @@
 			<i class="fa fa-user"></i>&nbsp;&nbsp;{{siteName}}&nbsp;&nbsp;</span>
 		<span>&nbsp;&nbsp;<i class="fa fa-envelope"></i>&nbsp;&nbsp;
 			{% for contact in information.socials.all() %}
-			<a><i class="{{contact.icon}}"></i></a>&nbsp;&nbsp;
+			{% if contact.newTab == true %}
+				{% set target = "_blank" %}
+			{% else %}
+				{% set target = "self" %}
+			{% endif %}
+			<a href="{{contact.profile}}" target="{{target}}"><i class="{{contact.icon}}"></i></a>&nbsp;&nbsp;
 			{% endfor %}
 		</small>
 	</span>

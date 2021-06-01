@@ -14,6 +14,15 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            fieldUid: 9eeed237-a5d4-4710-846b-ca79b03ed535 # New Tab?
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
             fieldUid: 0ac77457-0475-43b8-a97b-24ec09eca6bd # Social Icon Class
             instructions: null
             label: null
@@ -44,6 +53,20 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
+  9eeed237-a5d4-4710-846b-ca79b03ed535: # New Tab?
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: newTab
+    instructions: ''
+    name: 'New Tab?'
+    searchable: false
+    settings:
+      default: true
+      offLabel: 'No'
+      onLabel: 'Yes'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
   514afd6c-eb02-47a2-9664-e20e7d9d120d: # Social Link
     contentColumnType: string(255)
     fieldGroup: null
@@ -56,6 +79,8 @@ fields:
       placeholder: null
       types:
         - url
+        - tel
+        - email
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Url
