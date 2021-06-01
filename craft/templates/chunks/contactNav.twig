@@ -2,14 +2,16 @@
 	<small class="d-lg-block">
 		<span>
 			<i class="fa fa-user"></i>&nbsp;&nbsp;{{siteName}}&nbsp;&nbsp;</span>
-		<span>&nbsp;&nbsp;<i class="fa fa-envelope"></i>&nbsp;&nbsp;
+		<span>&nbsp;&nbsp;
 			{% for contact in information.socials.all() %}
-			{% if contact.newTab == true %}
-				{% set target = "_blank" %}
-			{% else %}
-				{% set target = "" %}
-			{% endif %}
-			<a href="{{contact.profile}}" target="{{target}}"><i class="{{contact.icon}}"></i></a>&nbsp;&nbsp;
+				{% if contact.newTab == true %}
+					{% set target = "_blank" %}
+				{% else %}
+					{% set target = "" %}
+				{% endif %}
+				<a href="{{contact.profile}}" target="{{target}}">
+					<i class="{{contact.icon}}"></i>
+				</a>&nbsp;&nbsp;
 			{% endfor %}
 		</small>
 	</span>
