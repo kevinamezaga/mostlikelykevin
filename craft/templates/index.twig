@@ -83,7 +83,7 @@
 											{% else %}
 												{% set target = "" %}
 											{% endif %}
-											<a data-aos="fade" data-aos-delay="{{ 800 + (socialCount * 100)}}" data-aos-once="true" class="btn-lg btn-link-light" href="{{social.profile}}" target="_blank">
+											<a data-aos="fade" data-aos-delay="{{ 800 + (socialCount * 100)}}" data-aos-once="true" class="btn-lg btn-link-light" href="{{social.profile}}" target="{{target}}">
 												<i class="{{social.icon}}"></i>
 											</a>
 											{% set socialCount = socialCount + 2 %}
