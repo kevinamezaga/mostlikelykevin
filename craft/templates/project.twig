@@ -29,7 +29,7 @@
 						{% else %}
 							{% set target = '_blank' %}
 						{% endif %}
-						<img class="img-fluid rounded shadow-lg float-lg-end" style="max-width:400px;" src="{{entry.projectFeaturedImage.one().getUrl({mode:'crop',width:'720',format:'png'})}}">
+						<img class="img-fluid rounded shadow-lg float-lg-end" style="width:400px;" src="{{entry.projectFeaturedImage.one().getUrl({mode:'crop',width:'720',format:'png'})}}">
                         <h3>
 							<span>
 								<i class="fa fa-bullseye"></i>
