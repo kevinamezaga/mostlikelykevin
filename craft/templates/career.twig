@@ -59,7 +59,7 @@
 										{% else %}
 											{% set dateEnd = position.dateEnded | date('M Y') %}
 										{% endif %}
-										<p class="mb-1">{{careerItem.dateStarted | date('M Y') }}
+										<p class="mb-1">{{position.dateStarted | date('M Y') }}
 											-
 											{{dateEnd}}</p>
 										<p>
