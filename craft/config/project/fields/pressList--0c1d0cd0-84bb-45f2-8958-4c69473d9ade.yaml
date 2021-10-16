@@ -1,0 +1,56 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 37f67ded-49df-4fee-910b-390bb4a521a8 # Press
+handle: pressList
+instructions: ''
+name: 'Press List'
+searchable: false
+settings:
+  columns:
+    __assoc__:
+      -
+        - a9160fab-0d94-479f-bcfb-a138ae6e39ca # Source
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - c24432e0-8190-462e-a395-43096e9382b3 # Author Name
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 903b06ae-416d-44a4-bca0-684ff32d826e # Article/Post Title
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - ca4908e8-ce2b-4470-9688-52ba0a5d381f # Date Published
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - cf6008af-6df6-4b26-a1dd-460f30d5aa32 # Article URL
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_presslist}}'
+  fieldLayout: row
+  maxRows: ''
+  minRows: '1'
+  placeholderKey: null
+  propagationMethod: all
+  selectionLabel: 'Add an Article...'
+  staticField: ''
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

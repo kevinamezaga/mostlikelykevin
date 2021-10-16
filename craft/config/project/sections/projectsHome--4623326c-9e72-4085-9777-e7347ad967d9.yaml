@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: projectsHome
+name: 'Projects — Home'
+propagationMethod: all
+siteSettings:
+  3b31166f-6db9-429f-8ed6-0c2c66424a07: # Kevin Amézaga
+    enabledByDefault: true
+    hasUrls: true
+    template: projects
+    uriFormat: projects
+type: single

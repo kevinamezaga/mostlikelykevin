@@ -1,5 +1,5 @@
 fieldLayouts:
-  19a643f9-62d5-4bd4-986a-35d69e5c0bac:
+  34f9c497-0ff9-492f-bd7b-a74cdc434443:
     tabs:
       -
         elements:
@@ -25,9 +25,9 @@ fieldLayouts:
             title: null
             type: craft\fieldlayoutelements\EntryTitleField
             warning: null
-            width: 100
+            width: 50
           -
-            fieldUid: a65447b3-63f3-46f6-b31f-04bf956e4d3a # Headshot
+            fieldUid: 0c1d0cd0-84bb-45f2-8958-4c69473d9ade # Press List
             instructions: ''
             label: ''
             required: '1'
@@ -50,10 +50,10 @@ fieldLayouts:
             width: 100
         name: SEO
         sortOrder: 2
-handle: home
-hasTitleField: false
-name: Home
-section: d68991a8-80cb-46b1-b63f-8f1e21cf8399 # Home
+handle: press
+hasTitleField: true
+name: Press
+section: 1762bd7b-82bb-4c17-af52-4550a526a4dd # Press
 sortOrder: 1
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null

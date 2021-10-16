@@ -1,10 +1,5 @@
 {% extends 'index' %}
 
-{% block pageTitle %}
-	<title>Projects —
-		{{siteName}}</title>
-{% endblock %}
-
 {% block extraJS %}{% endblock %}
 
 {% block body %}
@@ -22,6 +17,8 @@
 							<i class="fa fa-briefcase"></i>&nbsp;&nbsp;Career</a>
 						<a class="btn btn-outline-light" href="{{siteUrl ~ 'skills'}}">
 							<i class="far fa-star"></i>&nbsp;&nbsp;Skills</a>
+						<a class="btn btn-outline-light" href="{{siteUrl ~ 'press'}}">
+							<i class="far fa-newspaper"></i>&nbsp;&nbsp;Press</a>
 					</div>
 					<hr>
 					{% for project in craft.entries.section('projects').all() %}

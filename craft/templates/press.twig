@@ -1,0 +1,46 @@
+{% extends 'index' %}
+
+{% block pageTitle %}
+	<title>Projects —
+		{{siteName}}</title>
+{% endblock %}
+
+{% block extraJS %}{% endblock %}
+
+{% block body %}
+	<section class="bg-primary main-padding" id="main-section">
+		<div class="container">
+			<div class="row justify-content-center align-items-center fullheight-element">
+				<div class="col-lg-10">
+					<h3>{{siteName | split(' ')[0]}} in the Press</h3>
+					<hr>
+					{% include('chunks/contactNav') %}
+					<div>
+						<a class="btn btn-outline-light" href="{{siteUrl}}">
+							<i class="fa fa-arrow-left"></i>&nbsp;&nbsp;Back Home</a>
+						<a class="btn btn-outline-light" href="{{siteUrl ~ 'career'}}">
+							<i class="fa fa-briefcase"></i>&nbsp;&nbsp;Career</a>
+						<a class="btn btn-outline-light" href="{{siteUrl ~ 'projects'}}">
+							<i class="fa fa-project-diagram"></i>&nbsp;&nbsp;Projects</a>
+                        <a class="btn btn-outline-light" href="{{siteUrl ~ 'skills'}}">
+							<i class="far fa-star"></i>&nbsp;&nbsp;Skills</a>
+					</div>
+					<hr>
+					{% for item in entry.pressList.all() %}
+						<div class="row justify-content-center align-items-center mt-5">
+							<div class="col-lg-2 text-center">
+								<a class="text-light" href="{{item.source}}" target="_blank"><h1 class="display-1"><i class="fa fa-newspaper"></i></h1></a>
+							</div>
+							<div class="col-lg-10">
+								<a class="text-light" href="{{item.source}}" target="_blank"><h4 class="mt-2">{{item.articlePostTitle}}</h4></a>
+								<h6>Published on {{item.datePublished | date('M Y') }} by {{item.authorName}} on {{item.source}}</h6>
+								<a class="btn btn-outline-light" href="{{item.source}}" target="_blank">
+									<i class="fa fa-search"></i>&nbsp;&nbsp;Read</a>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}

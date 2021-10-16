@@ -83,3 +83,4 @@ fieldLayouts:
         sortOrder: 2
 handle: information
 name: Information
+sortOrder: 1

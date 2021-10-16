@@ -1,0 +1,148 @@
+field: 0c1d0cd0-84bb-45f2-8958-4c69473d9ade # Press List
+fieldLayouts:
+  84a6b307-3964-4917-aa90-2f6865fe5a1e:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: a9160fab-0d94-479f-bcfb-a138ae6e39ca # Source
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: c24432e0-8190-462e-a395-43096e9382b3 # Author Name
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 903b06ae-416d-44a4-bca0-684ff32d826e # Article/Post Title
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: ca4908e8-ce2b-4470-9688-52ba0a5d381f # Date Published
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: cf6008af-6df6-4b26-a1dd-460f30d5aa32 # Article URL
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  903b06ae-416d-44a4-bca0-684ff32d826e: # Article/Post Title
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: articlePostTitle
+    instructions: ''
+    name: 'Article/Post Title'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: 'Enter a Title...'
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  a9160fab-0d94-479f-bcfb-a138ae6e39ca: # Source
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: source
+    instructions: 'Name of Publication'
+    name: Source
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: 'Enter a Publication....'
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  c24432e0-8190-462e-a395-43096e9382b3: # Author Name
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: authorName
+    instructions: ''
+    name: 'Author Name'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: 'Enter an Author Name...'
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  ca4908e8-ce2b-4470-9688-52ba0a5d381f: # Date Published
+    columnSuffix: null
+    contentColumnType: datetime
+    fieldGroup: null
+    handle: datePublished
+    instructions: ''
+    name: 'Date Published'
+    searchable: true
+    settings:
+      max: null
+      min: null
+      minuteIncrement: '30'
+      showDate: true
+      showTime: false
+      showTimeZone: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Date
+  cf6008af-6df6-4b26-a1dd-460f30d5aa32: # Article URL
+    columnSuffix: null
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: articleUrl
+    instructions: 'Link to Article or Post.'
+    name: 'Article URL'
+    searchable: false
+    settings:
+      maxLength: '255'
+      placeholder: null
+      types:
+        - url
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url

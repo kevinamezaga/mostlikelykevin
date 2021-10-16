@@ -1,5 +1,5 @@
 fieldLayouts:
-  19a643f9-62d5-4bd4-986a-35d69e5c0bac:
+  315ffb7b-fd7c-42df-85f6-9655fbedd5bf:
     tabs:
       -
         elements:
@@ -27,7 +27,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: a65447b3-63f3-46f6-b31f-04bf956e4d3a # Headshot
+            fieldUid: 5bde24cc-1f5e-414b-b7a3-6cca8212952b # SEO
             instructions: ''
             label: ''
             required: '1'
@@ -37,24 +37,11 @@ fieldLayouts:
             width: 100
         name: Content
         sortOrder: 1
-      -
-        elements:
-          -
-            fieldUid: 5bde24cc-1f5e-414b-b7a3-6cca8212952b # SEO
-            instructions: ''
-            label: ''
-            required: '1'
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-        name: SEO
-        sortOrder: 2
-handle: home
+handle: projectsHome
 hasTitleField: false
-name: Home
-section: d68991a8-80cb-46b1-b63f-8f1e21cf8399 # Home
+name: 'Projects — Home'
+section: 4623326c-9e72-4085-9777-e7347ad967d9 # Projects — Home
 sortOrder: 1
-titleFormat: '{section.name|raw}'
+titleFormat: Projects
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

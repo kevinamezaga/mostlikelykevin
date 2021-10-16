@@ -1,13 +1,146 @@
-dateModified: 1622518266
+dateModified: 1634408159
 email:
   fromEmail: kevin@mostikelykevin.com
   fromName: 'Most Likely Kevin'
   transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    0ac77457-0475-43b8-a97b-24ec09eca6bd: 'Social Icon Class' # Social Icon Class
+    0c1d0cd0-84bb-45f2-8958-4c69473d9ade: 'Press List' # Press List
+    0c3ec289-b821-4b18-9bb2-472f7707f45f: Career # Career
+    0d32cc7a-9eec-4aea-a674-651b6f0590b2: 'Current Student' # Current Student
+    0eb10e24-b450-4524-960c-4f16b20eaf56: 'Date Started' # Date Started
+    1bc0ecdd-c6d1-4537-98fc-2a0f67af9ccd: 'User Styling' # User Styling
+    3b55c8c3-7bd4-4aed-a3a0-e52195b245b6: 'Currently Employed Here' # Currently Employed Here
+    3b89e9ab-270a-4c93-8267-57f15d573aa9: Press # Press
+    3b31166f-6db9-429f-8ed6-0c2c66424a07: 'Kevin Amézaga' # Kevin Amézaga
+    3e27daa8-9295-440b-aef0-bf4814d3b33d: 'Industry Anchor ID' # Industry Anchor ID
+    4d7939e7-a17f-4264-8b3b-b8ca6bab0ade: 'Institution Link' # Institution Link
+    5bde24cc-1f5e-414b-b7a3-6cca8212952b: SEO # SEO
+    05ecac73-6544-4afd-94a5-2e7debe0e034: 'Skills — Home' # Skills — Home
+    7c4a85e9-1df4-4417-904e-99070c71323a: 'Home Base Image' # Home Base Image
+    08c3cece-baba-403b-b910-bcf82581a06b: Globals # Globals
+    8df94775-08e5-4a9c-8015-13c3af3c308f: 'Project Featured Image' # Project Featured Image
+    8e289fe4-19fb-4d8c-b4ca-8cca28ba25cc: Skills # Skills
+    8ec3702f-6544-476f-815e-b74b50a330a8: 'Project Assets' # Project Assets
+    9eeed237-a5d4-4710-846b-ca79b03ed535: 'New Tab?' # New Tab?
+    17b942ee-1791-4285-a28d-7a4b259c51c6: Industries # Industries
+    23ec48e1-e230-4b89-bce0-35261c9dbe76: Career # Career
+    24efb0a7-e166-444b-90b5-e3330a2c072b: Skills # Skills
+    29bc93ae-77c4-4121-971d-657c5350c9ac: Projects # Projects
+    29e89b01-2124-417b-a053-a978438fde63: 'Date Completed' # Date Completed
+    34f7a287-b0e4-4aad-9545-5ac5aad23d61: Socials # Socials
+    37f67ded-49df-4fee-910b-390bb4a521a8: Press # Press
+    045d0d4b-1486-46b3-b691-134245774d9e: 'Home Base' # Home Base
+    048bcfea-6071-44fe-bb18-536dce9a288c: Position # Position
+    54bae388-6436-4719-a2e7-72fd7d7f7f7d: 'Project Employer' # Project Employer
+    55fed755-ee36-4314-8739-83b8c64ce8e5: 'Kevin Amézaga' # Kevin Amézaga
+    68ac98ea-8bac-4849-9cea-d60d14b27fee: Information # Information
+    70fca1e3-cfb8-41fa-982f-a661be1131f8: Home # Home
+    71e750a6-f5f4-435c-b40d-d4160bb61987: 'Start Date' # Start Date
+    80ff6559-88e8-4b18-a5cc-9969eab5366e: Headshot # Headshot
+    451c3f7d-d8da-4738-b52f-2dd7a98387c2: 'Career - Home' # Career - Home
+    478e3740-3f23-43d0-840b-de6d3942878e: 'Skills Used' # Skills Used
+    514afd6c-eb02-47a2-9664-e20e7d9d120d: 'Social Link' # Social Link
+    0739cf2d-0443-470b-8e35-5dc4cfc7c7f9: 'Current Program?' # Current Program?
+    862e4373-934b-4645-8851-1ce951cd43ec: 'Career - Home' # Career - Home
+    868b40f0-6987-4908-8663-0b8de869a748: Institution # Institution
+    903b06ae-416d-44a4-bca0-684ff32d826e: 'Article/Post Title' # Article/Post Title
+    1239e31c-2685-42f8-a391-a5964432bb5e: 'End Date' # End Date
+    1762bd7b-82bb-4c17-af52-4550a526a4dd: Press # Press
+    02125f3f-c007-4194-8935-fb4a1f983544: 'Project Link' # Project Link
+    3705d3f4-8fa3-4403-a354-9521c28a169f: social # social
+    4212bd1d-2ac8-4b2d-a066-9b9ce38f9de8: 'Project Description' # Project Description
+    7943ca57-a7d0-47f4-9b97-e9f3635b8f5a: Programs # Programs
+    9766e3a1-36f2-43ec-9cbd-f02862d06a2b: 'Current Position' # Current Position
+    34593f5a-97a0-42e6-ba7d-61aa6a4b6257: 'Skills — Home' # Skills — Home
+    68922d8a-13d1-4ed2-b772-95988550d7d1: 'Contact Phone' # Contact Phone
+    76157a8e-2a05-4765-a37f-cec909a3f8c9: Education # Education
+    03352428-1dd6-4ceb-8092-abf44d88bace: 'Date Ended' # Date Ended
+    4623326c-9e72-4085-9777-e7347ad967d9: 'Projects — Home' # Projects — Home
+    6398217c-4a0c-426c-924f-0d4047b910cf: Projects # Projects
+    a05576f4-a119-4e08-aa16-a7801d2aa7e8: Awards # Awards
+    a4c9e76e-599c-40ba-86c3-0c6491b6dd01: 'Award Name' # Award Name
+    a9160fab-0d94-479f-bcfb-a138ae6e39ca: Source # Source
+    a65447b3-63f3-46f6-b31f-04bf956e4d3a: Headshot # Headshot
+    adb2b46e-6230-4d66-a786-8d55539dae17: Projects # Projects
+    adb7dcca-bb43-4430-8e3e-29e3bc0f8f54: 'Employer Link' # Employer Link
+    b3fa1eee-2ab1-4536-976c-8d28ea9ebfdb: 'Projects — Home' # Projects — Home
+    b86db2b4-0892-4b6d-965b-72ea308e61bc: 'End Date' # End Date
+    b577e176-40ca-413f-afb1-0e02162eef18: Industry # Industry
+    bb4377b6-9e6b-4300-b899-bea484d22550: 'Industry Title' # Industry Title
+    bb7621ac-92be-47d1-824f-9e147e964432: 'Job Description' # Job Description
+    bbf3d555-b149-405b-abb7-e1ebf89e141d: 'Class Of' # Class Of
+    bdeed735-3dbd-45a4-bfc7-6bc55d01ef0c: 'Employer Name' # Employer Name
+    c34ea056-2f00-47e1-a7d4-0e85ea072426: 'Skill Level' # Skill Level
+    c24432e0-8190-462e-a395-43096e9382b3: 'Author Name' # Author Name
+    c759002c-f56e-4931-a20a-c74c1f9dcedf: 'Industry Image' # Industry Image
+    ca4908e8-ce2b-4470-9688-52ba0a5d381f: 'Date Published' # Date Published
+    cdecb4bd-39c5-49e7-b9c0-4300f81c3405: Year # Year
+    cf6008af-6df6-4b26-a1dd-460f30d5aa32: 'Article URL' # Article URL
+    cf6929c1-5142-4d00-ae42-d6cca8641957: Home # Home
+    d8e3a7bc-6581-4619-a36a-76f5d3c96b85: 'Job Title' # Job Title
+    d68991a8-80cb-46b1-b63f-8f1e21cf8399: Home # Home
+    e2e46656-73f6-4887-9745-56908dcbeaf7: Issuer # Issuer
+    e36699f8-e8ad-4ac9-b59a-63e868a118ca: 'Link to Award' # Link to Award
+    eb24ad07-b0e9-44b8-8aa9-8270951139f3: 'Program Name' # Program Name
+    edf48106-36f9-41f0-a39d-a9b44a854173: 'Start Date' # Start Date
+    f0f69d15-feed-42c9-915c-6e03a5a437fa: 'Contact Email' # Contact Email
+    f850efb0-88f5-435a-a231-ba9001554ff2: Career # Career
+    fab9a07f-4f19-4812-8169-70358d9aae7b: Common # Common
+    fd08f9e6-cc64-4709-bcb2-aac28fd11ffd: Education # Education
+    ffba9dfb-fc6e-4fb1-b1c5-189e33071a97: 'Positions Held' # Positions Held
 plugins:
   redactor:
     edition: standard
     enabled: true
     schemaVersion: 2.3.0
+  seo:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.2.0
+    settings:
+      description: ''
+      facebookAppId: ''
+      metaTemplate: ''
+      removeAlternateUrls: ''
+      robots:
+        - ''
+        - ''
+        - ''
+        - ''
+        - ''
+        - ''
+      robotsTxt: "{# Sitemap URL #}\r\nSitemap: {{ url(seo.sitemapName ~ '.xml') }}\r\n\r\n{# Disallows #}\r\n{% if craft.app.config.env != 'dev' %}\r\n\r\n{# Disallow access to cpresources/ when live #}\r\nUser-agent: *\r\nDisallow: /cpresources/\r\n\r\n{% endif %}"
+      sitemapLimit: '1000'
+      sitemapName: sitemap
+      socialImage:
+        - '183'
+      title:
+        -
+          __assoc__:
+            -
+              - key
+              - '1'
+            -
+              - locked
+              - '0'
+            -
+              - template
+              - '{title}'
+        -
+          __assoc__:
+            -
+              - key
+              - '2'
+            -
+              - locked
+              - '1'
+            -
+              - template
+              - ' — {{ siteName }}'
+      titleSuffix: null
+      twitterHandle: kevinamezaga
   super-table:
     edition: standard
     enabled: true
@@ -17,7 +150,7 @@ system:
   live: true
   name: 'Kevin Amézaga'
   retryDuration: null
-  schemaVersion: 3.6.8
+  schemaVersion: 3.7.8
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false

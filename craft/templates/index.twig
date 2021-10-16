@@ -1,9 +1,9 @@
 <html>
 	<head>
-		{% block pageTitle %}
-			<title>{{siteName}}</title>
-		{% endblock %}
 		<meta charset="utf-8">
+		{% block seo %}
+			{% hook "seo" %}
+		{% endblock %}
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 		<link rel="icon" type="image/png" sizes="16x16" href="{{siteUrl ~ 'assets/img/favicons/favicon-16px.png'}}">
 		<link rel="icon" type="image/png" sizes="32x32" href="{{siteUrl ~ 'assets/img/favicons/favicon-32px.png'}}">
@@ -46,6 +46,8 @@
 										<i class="fa fa-project-diagram"></i>&nbsp;&nbsp;Projects</a>
 									<a data-aos="flip-right" data-aos-delay="600" data-aos-once="true" class="btn btn-outline-light" href="{{siteUrl ~ 'skills'}}">
 										<i class="far fa-star"></i>&nbsp;&nbsp;Skills</a>
+										<a data-aos="flip-right" data-aos-delay="600" data-aos-once="true" class="btn btn-outline-light" href="{{siteUrl ~ 'press'}}">
+										<i class="far fa-newspaper"></i>&nbsp;&nbsp;Press</a>
 								</div>
 								<p>
 									{% if industryCount != 0 %}
