@@ -22,15 +22,13 @@
 		</script>
 
 		{% set industries = information.industries %}
-		{% set industryCount = industries.count() %}
-		{% set industryLoopCount = 1 %}
 
 		{% block body %}
 			<section class="bg-primary" id="main-section">
 				<div id="color-overlay">
 					<div class="container">
 						<div class="row align-items-center justify-content-center fullheight-element">
-							<div class="col-lg-5 text-center" data-aos="fade-up" data-aos-once="true">
+							<div class="col-lg-6 text-center" data-aos="fade-up" data-aos-once="true">
 								<img data-aos="zoom-in" data-aos-delay="300" data-aos-once="true" class="img-fluid" style="max-width:150px;" src="{{ entry.headshot.one().getUrl({mode:'crop',width:'250',format:'png'}) | default('assets/img/portraits/kevin-headshot-v2-sized-down.png') }}">
 								<h2 class="mt-2">{{siteName}}</h2>
 								{% set firstJobStart = craft.entries.section('career').orderBy('startDate asc').one().startDate | default(date('today')) %}
@@ -46,27 +44,32 @@
 										<i class="fa fa-project-diagram"></i>&nbsp;&nbsp;Projects</a>
 									<a data-aos="flip-right" data-aos-delay="600" data-aos-once="true" class="btn btn-outline-light" href="{{siteUrl ~ 'skills'}}">
 										<i class="far fa-star"></i>&nbsp;&nbsp;Skills</a>
-										<a data-aos="flip-right" data-aos-delay="600" data-aos-once="true" class="btn btn-outline-light" href="{{siteUrl ~ 'press'}}">
+									<a data-aos="flip-right" data-aos-delay="700" data-aos-once="true" class="btn btn-outline-light" href="{{siteUrl ~ 'press'}}">
 										<i class="far fa-newspaper"></i>&nbsp;&nbsp;Press</a>
+									<a data-aos="flip-right" data-aos-delay="700" data-aos-once="true" class="btn btn-outline-light" href="{{siteUrl ~ 'about'}}">
+										<i class="far fa-user"></i>&nbsp;&nbsp;About</a>
 								</div>
 								<p>
-									{% if industryCount != 0 %}
-										{% for industry in industries.all() %}
-											<a id="{{industry.industryAnchorId}}">{{industry.industryTitle}}</a>
-											{% if industryLoopCount != industryCount %}
-												&nbsp;&nbsp;&#124;&nbsp;&nbsp;
-											{% endif %}
-											{% set industryLoopCount = industryLoopCount + 1 %}
-										{% endfor %}
+									{% if industries | length %}
+										<div class="d-none d-lg-block">
+											{% set loopCount = 1 %}
+											{% for industry in industries.all() %}
+												{% if loopCount is divisible by(4) %}
+													<div class="d-block d-md-none"></div>
+												{% endif %}
+												<a class="tag-item" id="{{industry.industryAnchorId}}">{{industry.industryTitle}}</a>
+												{% set loopCount = loopCount + 1 %}
+											{% endfor %}
+										</div>
 									{% endif %}
 								</p>
 								<div class="mt-4 mb-4">
 									{% for award in information.awards.all() %}
-										<p>
+										<div>
 											<a class="tag-item" href="{{award.linkToAward}}" target="_blank">
 												<i class="fa fa-trophy"></i>&nbsp;&nbsp;{{award.year}}
 												{{award.awardName}}</a>
-										</p>
+										</div>
 									{% endfor %}
 								</div>
 								<p>
@@ -78,8 +81,9 @@
 
 								{% if socials.count() > 0 %}
 									{% set socialCount = 1 %}
+									{% set socialCounter = 1 %}
 									<hr data-aos="fade" data-aos-delay="700" data-aos-once="true">
-									<h1>
+									<h2 style="line-height:1.5em;">
 										{% for social in socials.all() %}
 											{% if social.newTab == true %}
 												{% set target = "_blank" %}
@@ -90,8 +94,9 @@
 												<i class="{{social.icon}}"></i>
 											</a>
 											{% set socialCount = socialCount + 2 %}
+											{% set socialCounter = socialCounter + 1 %}
 										{% endfor %}
-									</h1>
+									</h2>
 								{% endif %}
 							</div>
 						</div>

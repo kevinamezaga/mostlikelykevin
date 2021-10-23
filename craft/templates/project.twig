@@ -2,10 +2,6 @@
 
 {% block extraJS %}{% endblock %}
 
-{% block pageTitle %}
-	<title>{{entry.title}} — {{siteName}}</title>
-{% endblock %}
-
 {% block body %}
 	<section class="bg-primary main-padding" id="main-section">
 		<div class="container pt-5 pb-5">
@@ -21,6 +17,8 @@
 							<i class="fas fa-briefcase"></i>&nbsp;&nbsp;Career</a>
 						<a class="btn btn-outline-light" href="{{siteUrl ~ 'skills'}}">
 							<i class="far fa-star"></i>&nbsp;&nbsp;Skills</a>
+						<a class="btn btn-outline-light" href="{{siteUrl ~ 'about'}}">
+							<i class="far fa-user"></i>&nbsp;&nbsp;About</a>
 						<a class="btn btn-outline-light" href="{{siteUrl ~ 'press'}}">
 							<i class="far fa-newspaper"></i>&nbsp;&nbsp;Press</a>
 					</div>
@@ -32,7 +30,7 @@
 							{% set target = '_blank' %}
 						{% endif %}
 						<img class="img-fluid rounded shadow-lg float-lg-end" style="width:400px;" src="{{entry.projectFeaturedImage.one().getUrl({mode:'crop',width:'720',format:'png'})}}">
-                        <h3 class="mt-4 mt-md-3 mt-lg-0">
+						<h3 class="mt-4 mt-md-3 mt-lg-0">
 							<span>
 								<i class="fa fa-bullseye"></i>
 							</span>&nbsp;&nbsp;<a href="{{entry.projectLink | default('') }}" target="{{target}}">{{entry.title}}</a>
@@ -40,19 +38,57 @@
 						<p style="margin-left:2.85em;">
 							<strong>{{entry.dateCompleted | date('M Y') }}</strong>
 						</p>
-                        <hr>
-                        <div style="line-height:2.25em;">
-                            <span tag-item>
-                                <i class="fas fa-tags"></i>
-                            </span>
-                            {% for skill in entry.skillsUsed.all() %}
-                                <a class="tag-item" href="{{skill.url}}">{{skill.title}}</a>
-                            {% endfor %}
-                        </div>
-                        <hr>
-                        {{entry.projectDescription | raw}}
-                        <hr>
-                        <a class="btn btn-outline-light" href="{{entry.projectLink | default('') }}" target="{{target}}"><i class="fa fa-search"></i>&nbsp;&nbsp;View Project Live</a>
+						<hr>
+						<div>
+							<span tag-item>
+								<i class="fas fa-tags"></i>
+							</span>
+							{% for skill in entry.skillsUsed.all() %}
+								<a class="tag-item" href="{{skill.url}}">{{skill.title}}</a>
+							{% endfor %}
+						</div>
+						<hr>
+						{{entry.projectDescription | raw}}
+						{% if entry.contentBlocks | length %}
+							{% for block in entry.contentBlocks.all() %}
+								{% if block.type == 'text' %}
+									{{ block.text | raw }}
+								{% elseif block.type == 'image' %}
+									<div class="row justify-content-center mt-4">
+										<div class="col-lg-10 text-center">
+											<figure>
+												<img class="img-fluid rounded shadow" src="{{block.image.one().url}}">
+												{% if block.caption | length %}
+												<figcaption>{{block.caption}}</figcaption>
+												{% endif %}
+											</figure>
+										</div>
+									</div>
+								{% elseif block.type == 'imageGallery' %}
+									<div class="row justify-content-center align-items-center text-center">
+										{% for image in block.imageGallery.all() %}
+											{% if loop.index > 3 %}
+												{% set mt = '4' %}
+											{% else %}
+												{% set mt = '0' %}
+											{% endif %}
+											<div class="col-lg-4 mt-5 mt-lg-{{mt}}"><img class="img-fluid rounded shadow" src="{{image.url}}"></div>
+										{% endfor %}
+									</div>
+								{% elseif block.type == 'video' %}
+									<div class="row pt-3 pb-3 justify-content-center">
+										<div class="col-lg-10">
+											<div class="ratio ratio-16x9">
+												<iframe src="https://www.youtube.com/embed/{{block.video}}?rel=0" title="YouTube video" allowfullscreen></iframe>
+											</div>
+										</div>
+									</div>
+								{% endif %}
+							{% endfor %}
+						{% endif %}
+						<hr>
+						<a class="btn btn-outline-light" href="{{entry.projectLink | default('') }}" target="{{target}}">
+							<i class="fa fa-search"></i>&nbsp;&nbsp;View Project Live</a>
 					</div>
 				</div>
 			</div>

@@ -1,12 +1,5 @@
 {% extends 'index' %}
 
-{% block pageTitle %}
-	<title>Projects w/
-		{{category.title}}
-		—
-		{{siteName}}</title>
-{% endblock %}
-
 {% block extraJS %}{% endblock %}
 
 {% block body %}
@@ -27,6 +20,8 @@
 							<i class="fa fa-briefcase"></i>&nbsp;&nbsp;Career</a>
 						<a class="btn btn-outline-light" href="{{siteUrl ~ 'projects'}}">
 							<i class="fas fa-project-diagram"></i>&nbsp;&nbsp;Projects</a>
+						<a class="btn btn-outline-light" href="{{siteUrl ~ 'about'}}">
+							<i class="far fa-user"></i>&nbsp;&nbsp;About</a>
 						<a class="btn btn-outline-light" href="{{siteUrl ~ 'press'}}">
 							<i class="far fa-newspaper"></i>&nbsp;&nbsp;Press</a>
 					</div>
@@ -40,13 +35,16 @@
 								</div>
 								<div class="col-lg-7">
 									<div style="font-size:12px;margin-bottom:1em;"></div>
-									<div style="line-height:2.25em;">
+									<div>
 										<span tag-item>
 											<i class="fas fa-tags"></i>
 										</span>
-										{% for skill in project.skillsUsed.all() %}
+										{% for skill in project.skillsUsed.limit(8).all() %}
 											<a class="tag-item" href="{{skill.url}}">{{skill.title}}</a>
 										{% endfor %}
+										{% if project.skillsUsed.count() > 8 %}
+											<span>and {{project.skillsUsed.count() - 8}} more</span>
+										{% endif %}
 									</div>
 									<h2 class="mt-2">{{project.title}}</h2>
 									<h6>{{project.dateCompleted | date('M Y') }}

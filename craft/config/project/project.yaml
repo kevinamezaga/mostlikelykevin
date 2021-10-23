@@ -1,4 +1,4 @@
-dateModified: 1634408159
+dateModified: 1635012246
 email:
   fromEmail: kevin@mostikelykevin.com
   fromName: 'Most Likely Kevin'
@@ -15,9 +15,14 @@ meta:
     3b89e9ab-270a-4c93-8267-57f15d573aa9: Press # Press
     3b31166f-6db9-429f-8ed6-0c2c66424a07: 'Kevin Amézaga' # Kevin Amézaga
     3e27daa8-9295-440b-aef0-bf4814d3b33d: 'Industry Anchor ID' # Industry Anchor ID
+    3fe436de-85e1-4341-9af7-ebea270062d6: About # About
+    4d626a50-9f46-4330-b7ef-a0a9c24700b6: Video # Video
     4d7939e7-a17f-4264-8b3b-b8ca6bab0ade: 'Institution Link' # Institution Link
     5bde24cc-1f5e-414b-b7a3-6cca8212952b: SEO # SEO
+    5bfcb389-d115-4510-b6f3-4159dee9c639: About # About
     05ecac73-6544-4afd-94a5-2e7debe0e034: 'Skills — Home' # Skills — Home
+    6c9fab2f-eda4-44fd-bd3d-795393601d98: 'Image Gallery' # Image Gallery
+    6da42994-14da-4e21-b1ed-2854a8b2f867: caption # caption
     7c4a85e9-1df4-4417-904e-99070c71323a: 'Home Base Image' # Home Base Image
     08c3cece-baba-403b-b910-bcf82581a06b: Globals # Globals
     8df94775-08e5-4a9c-8015-13c3af3c308f: 'Project Featured Image' # Project Featured Image
@@ -38,6 +43,7 @@ meta:
     68ac98ea-8bac-4849-9cea-d60d14b27fee: Information # Information
     70fca1e3-cfb8-41fa-982f-a661be1131f8: Home # Home
     71e750a6-f5f4-435c-b40d-d4160bb61987: 'Start Date' # Start Date
+    74c26f62-0283-44fb-b6eb-d288fda24fe4: 'Image Gallery' # Image Gallery
     80ff6559-88e8-4b18-a5cc-9969eab5366e: Headshot # Headshot
     451c3f7d-d8da-4738-b52f-2dd7a98387c2: 'Career - Home' # Career - Home
     478e3740-3f23-43d0-840b-de6d3942878e: 'Skills Used' # Skills Used
@@ -51,6 +57,7 @@ meta:
     02125f3f-c007-4194-8935-fb4a1f983544: 'Project Link' # Project Link
     3705d3f4-8fa3-4403-a354-9521c28a169f: social # social
     4212bd1d-2ac8-4b2d-a066-9b9ce38f9de8: 'Project Description' # Project Description
+    4804bc4f-c173-4642-a43b-6c3daa78176b: Image # Image
     7943ca57-a7d0-47f4-9b97-e9f3635b8f5a: Programs # Programs
     9766e3a1-36f2-43ec-9cbd-f02862d06a2b: 'Current Position' # Current Position
     34593f5a-97a0-42e6-ba7d-61aa6a4b6257: 'Skills — Home' # Skills — Home
@@ -63,8 +70,11 @@ meta:
     a4c9e76e-599c-40ba-86c3-0c6491b6dd01: 'Award Name' # Award Name
     a9160fab-0d94-479f-bcfb-a138ae6e39ca: Source # Source
     a65447b3-63f3-46f6-b31f-04bf956e4d3a: Headshot # Headshot
+    aa22343e-b312-44c6-8457-b9aef7834c5b: Text # Text
+    ab58abab-877d-400e-ac57-9cea3c9ea495: text # text
     adb2b46e-6230-4d66-a786-8d55539dae17: Projects # Projects
     adb7dcca-bb43-4430-8e3e-29e3bc0f8f54: 'Employer Link' # Employer Link
+    b046be21-3c43-4206-b654-6f6f3457f3f0: Video # Video
     b3fa1eee-2ab1-4536-976c-8d28ea9ebfdb: 'Projects — Home' # Projects — Home
     b86db2b4-0892-4b6d-965b-72ea308e61bc: 'End Date' # End Date
     b577e176-40ca-413f-afb1-0e02162eef18: Industry # Industry
@@ -81,8 +91,11 @@ meta:
     cf6929c1-5142-4d00-ae42-d6cca8641957: Home # Home
     d8e3a7bc-6581-4619-a36a-76f5d3c96b85: 'Job Title' # Job Title
     d68991a8-80cb-46b1-b63f-8f1e21cf8399: Home # Home
+    de56536a-5a82-4087-9fe6-7df6135ebf65: Image # Image
     e2e46656-73f6-4887-9745-56908dcbeaf7: Issuer # Issuer
+    e70bc399-6474-44fd-a015-834a84ecba2e: 'Content Blocks' # Content Blocks
     e36699f8-e8ad-4ac9-b59a-63e868a118ca: 'Link to Award' # Link to Award
+    e89294ee-2e5e-4b95-9635-a7faf519c8ca: Image # Image
     eb24ad07-b0e9-44b8-8aa9-8270951139f3: 'Program Name' # Program Name
     edf48106-36f9-41f0-a39d-a9b44a854173: 'Start Date' # Start Date
     f0f69d15-feed-42c9-915c-6e03a5a437fa: 'Contact Email' # Contact Email

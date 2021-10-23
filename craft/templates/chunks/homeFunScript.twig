@@ -1,6 +1,6 @@
 <script>
 
-	{% if industryCount != 0 %}
+	{% if industries | length %}
 {% for industry in industries.all() %}
 document.getElementById("{{ industry.industryAnchorId }}").addEventListener("mouseover", function () {
 document.getElementById("main-section").style.backgroundImage = "url( {{ industry.industryImage.one().getUrl({mode:'crop',width:'720',height:'480',format:'png'}) }})";
@@ -9,7 +9,7 @@ document.getElementById("color-overlay").style.backgroundColor = "rgba(69,119,18
 }, false);{% endfor %}
 {% endif %}
 
-{% if industryCount != 0 %}
+{% if industries | length %}
 {% for industry in industries.all() %}
 document.getElementById("{{ industry.industryAnchorId }}").addEventListener("mouseout", function () {
 document.getElementById("main-section").style.backgroundImage = "";

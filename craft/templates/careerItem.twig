@@ -2,17 +2,21 @@
 
 {% block extraJS %}{% endblock %}
 
-{% block pageTitle %}
-	<title>{{siteName | split(' ')[0] }}
-		@
-		{{entry.title}}</title>
-{% endblock %}
-
 {% block body %}
 	<section class="bg-primary main-padding" id="main-section">
-		<div class="container pt-5 pb-5">
+		<div class="container">
 			<div class="row justify-content-center fullheight-element">
-				<div class="col-lg-7">
+				<div class="col-lg-8">
+					{% if 'mostlikelykevin.com' in entry.employerLink %}
+						{% set target = '' %}
+					{% else %}
+						{% set target = '_blank' %}
+					{% endif %}
+					<h3>
+						Kevin at
+						<a href="{{entry.employerLink | default('') }}" target="{{target}}">{{entry.title}}</a>
+					</h3>
+					<hr>
 					{% include('chunks/contactNav') %}
 					<div>
 						<a class="btn btn-outline-light" href="{{siteUrl ~ 'career'}}">
@@ -23,31 +27,23 @@
 							<i class="fas fa-project-diagram"></i>&nbsp;&nbsp;Projects</a>
 						<a class="btn btn-outline-light" href="{{siteUrl ~ 'skills'}}">
 							<i class="far fa-star"></i>&nbsp;&nbsp;Skills</a>
+						<a class="btn btn-outline-light" href="{{siteUrl ~ 'about'}}">
+							<i class="far fa-user"></i>&nbsp;&nbsp;About</a>
 						<a class="btn btn-outline-light" href="{{siteUrl ~ 'press'}}">
 							<i class="far fa-newspaper"></i>&nbsp;&nbsp;Press</a>
 					</div>
 					<div>
 						<hr>
-						{% if 'mostlikelykevin.com' in entry.employerLink %}
-							{% set target = '' %}
-						{% else %}
-							{% set target = '_blank' %}
-						{% endif %}
-						<h3>
-							<span>
-								<i class="fa fa-bullseye"></i>
-							</span>&nbsp;&nbsp;<a href="{{entry.employerLink | default('') }}" target="{{target}}">{{entry.title}}</a>
-						</h3>
 						{% if entry.employedHere == true %}
 							{% set dateEnd = 'Present' %}
 						{% else %}
 							{% set dateEnd = entry.endDate | date('M Y') %}
 						{% endif %}
-						<p style="margin-left:2.85em;">
-							<strong>{{entry.startDate | date('M Y') }}
+						<h5>
+							<span><i class="fa fa-calendar-alt"></i>&nbsp;&nbsp;</span><strong>{{entry.startDate | date('M Y') }}
 								-
 								{{dateEnd}}</strong>
-						</p>
+							</h5>
 						<hr class="half-hr">
 						<ul>
 							{% for position in entry.positionsHeld.orderBy('dateStarted desc').all() %}
@@ -78,8 +74,11 @@
 							{% for project in relatedProjects %}
 								<div>
 									<hr>
-									<h6><i class="fa fa-project-diagram"></i>&nbsp;&nbsp;{{project.title}} — {{project.dateCompleted | date('M Y')}}</h6>
-									<div style="line-height:2.25em;">
+									<h6>
+										<i class="fa fa-project-diagram"></i>&nbsp;&nbsp;{{project.title}}
+										—
+										{{project.dateCompleted | date('M Y')}}</h6>
+									<div>
 										<span tag-item>
 											<i class="fas fa-tags"></i>
 										</span>
@@ -88,7 +87,10 @@
 										{% endfor %}
 									</div>
 									<p style="margin-left:1.85em;" class="text-truncate mb-2 mt-2">{{project.projectDescription | slice(0,200) | striptags}}</p>
-									<p style="margin-left:1.6em;"><a class="btn btn-outline-light" href="{{project.url}}"><i class="fa fa-search"></i>&nbsp;&nbsp;Learn More</a></p>
+									<p style="margin-left:1.6em;">
+										<a class="btn btn-outline-light" href="{{project.url}}">
+											<i class="fa fa-search"></i>&nbsp;&nbsp;Learn More</a>
+									</p>
 								</div>
 							{% endfor %}
 						{% endif %}

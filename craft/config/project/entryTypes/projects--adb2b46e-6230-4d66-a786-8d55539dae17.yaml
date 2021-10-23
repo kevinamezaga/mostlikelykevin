@@ -75,7 +75,16 @@ fieldLayouts:
             fieldUid: 4212bd1d-2ac8-4b2d-a066-9b9ce38f9de8 # Project Description
             instructions: ''
             label: ''
-            required: '1'
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: e70bc399-6474-44fd-a015-834a84ecba2e # Content Blocks
+            instructions: 'Use this if you want to go more in depth in an article style. It will give you more control over media presented, to be quite honest.'
+            label: ''
+            required: ''
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null

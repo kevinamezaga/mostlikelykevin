@@ -1,0 +1,60 @@
+{% extends "index" %}
+
+{% block extraJS %}{% endblock %}
+
+{% block body %}
+	<section class="bg-primary main-padding" id="main-section">
+		<div class="container">
+			<div class="row justify-content-center fullheight-element">
+				<div class="col-lg-8">
+					<h3 class="mt-4 mt-md-3 mt-lg-0">
+						About {{siteName | split(' ')[0]}}
+					</h3>
+					<hr>
+					{% include('chunks/contactNav') %}
+					<div>
+						<a class="btn btn-outline-light" href="{{siteUrl}}">
+							<i class="fa fa-arrow-left"></i>&nbsp;&nbsp;Back Home</a>
+						<a class="btn btn-outline-light" href="{{siteUrl ~ 'projects'}}">
+							<i class="fa fa-project-diagram"></i>&nbsp;&nbsp;Projects</a>
+						<a class="btn btn-outline-light" href="{{siteUrl ~ 'career'}}">
+							<i class="fas fa-briefcase"></i>&nbsp;&nbsp;Career</a>
+						<a class="btn btn-outline-light" href="{{siteUrl ~ 'skills'}}">
+							<i class="far fa-star"></i>&nbsp;&nbsp;Skills</a>
+						<a class="btn btn-outline-light" href="{{siteUrl ~ 'press'}}">
+							<i class="far fa-newspaper"></i>&nbsp;&nbsp;Press</a>
+					</div>
+					<div>
+						<hr>
+						{% for block in entry.contentBlocks.all() %}
+							{% if block.type == 'text' %}
+								{{ block.text | raw }}
+							{% elseif block.type == 'image' %}
+								<div class="row justify-content-center">
+									<div class="col-lg-8 text-center">
+										<img class="img-fluid rounded shadow" src="{{block.image.one().url}}">
+									</div>
+								</div>
+							{% elseif block.type == 'imageGallery' %}
+								<div class="row justify-content-center align-items-center text-center">
+									{% for image in block.imageGallery.all() %}
+										<div class="col-lg-4 mt-5 mt-lg-0"><img class="img-fluid rounded shadow" src="{{image.url}}"></div>
+									{% endfor %}
+								</div>
+							{% elseif block.type == 'video' %}
+                            <div class="row pt-3 pb-3 justify-content-center">
+                                <div class="col-lg-10">
+                                    <div class="ratio ratio-16x9">
+                                        <iframe src="https://www.youtube.com/embed/{{block.video}}?rel=0" title="YouTube video" allowfullscreen></iframe>
+                                      </div>
+                                </div>
+                            </div>
+							{% endif %}
+							<div class="mb-4"></div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}

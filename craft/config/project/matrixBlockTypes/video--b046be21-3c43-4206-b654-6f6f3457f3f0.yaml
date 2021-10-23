@@ -1,0 +1,41 @@
+field: e70bc399-6474-44fd-a015-834a84ecba2e # Content Blocks
+fieldLayouts:
+  876b5c5d-1cd2-47de-8b67-590bf3cd295e:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 4d626a50-9f46-4330-b7ef-a0a9c24700b6 # Video
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  4d626a50-9f46-4330-b7ef-a0a9c24700b6: # Video
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: video
+    instructions: 'YouTube Video Code'
+    name: Video
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: 'Enter a YouTube Video Code...'
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: video
+name: Video
+sortOrder: 3

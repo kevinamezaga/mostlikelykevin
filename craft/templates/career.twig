@@ -2,16 +2,11 @@
 
 {% block extraJS %}{% endblock %}
 
-{% block pageTitle %}
-	<title>Career —
-		{{siteName}}</title>
-{% endblock %}
-
 {% block body %}
 	<section class="bg-primary main-padding" id="main-section">
-		<div class="container pt-5 pb-5">
+		<div class="container">
 			<div class="row justify-content-center fullheight-element">
-				<div class="col-lg-7">
+				<div class="col-lg-8">
 					<h3>{{siteName | split(' ')[0]}}'s Career</h3>
 					<hr>
 					{% include('chunks/contactNav') %}
@@ -22,6 +17,8 @@
 							<i class="fas fa-project-diagram"></i>&nbsp;&nbsp;Projects</a>
 						<a class="btn btn-outline-light" href="{{siteUrl ~ 'skills'}}">
 							<i class="far fa-star"></i>&nbsp;&nbsp;Skills</a>
+						<a class="btn btn-outline-light" href="{{siteUrl ~ 'about'}}">
+							<i class="far fa-user"></i>&nbsp;&nbsp;About</a>
 						<a class="btn btn-outline-light" href="{{siteUrl ~ 'press'}}">
 							<i class="far fa-newspaper"></i>&nbsp;&nbsp;Press</a>
 					</div>
@@ -88,7 +85,8 @@
 									<i class="fa fa-bullseye"></i>
 								</span>&nbsp;&nbsp;<a href="{{institution.institutionLink | default('') }}" target="{{target}}">{{institution.institution}}</a>
 							</h5>
-							<h6 style="margin-left:2rem;">Class of {{institution.classOf}}</h6>
+							<h6 style="margin-left:2rem;">Class of
+								{{institution.classOf}}</h6>
 							<hr class="half-hr">
 							<ul>
 								{% for program in institution.programs.orderBy('startDate desc').all() %}

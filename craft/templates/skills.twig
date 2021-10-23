@@ -1,17 +1,14 @@
 {% extends 'index' %}
 
-{% block pageTitle %}
-	<title>Skills —
-		{{siteName}}</title>
-{% endblock %}
-
 {% block extraJS %}{% endblock %}
 
 {% block body %}
 	<section class="bg-primary main-padding" id="main-section">
 		<div class="container">
 			<div class="row justify-content-center align-items-center fullheight-element">
-				<div class="col-xl-10">
+				<div class="col-lg-8">
+					<h3>{{siteName | split(' ')[0]}}'s Skills</h3>
+					<hr>
 					{% include('chunks/contactNav') %}
 					<div>
 						<a class="btn btn-outline-light" href="{{siteUrl}}">
@@ -20,6 +17,8 @@
 							<i class="fa fa-briefcase"></i>&nbsp;&nbsp;Career</a>
 						<a class="btn btn-outline-light" href="{{siteUrl ~ 'projects'}}">
 							<i class="fas fa-project-diagram"></i>&nbsp;&nbsp;Projects</a>
+						<a class="btn btn-outline-light" href="{{siteUrl ~ 'about'}}">
+							<i class="far fa-user"></i>&nbsp;&nbsp;About</a>
 						<a class="btn btn-outline-light" href="{{siteUrl ~ 'press'}}">
 							<i class="far fa-newspaper"></i>&nbsp;&nbsp;Press</a>
 					</div>
@@ -27,7 +26,7 @@
 					<div class="row justify-content-center align-items-center">
 						{% for skill in craft.categories.group('skills').all() %}
 							<div class="col-lg-4 mt-5 text-center">
-								<h3 class="mb-3">{{skill.title}}</h3>
+								<h3 class="mb-3 text-truncated">{{skill.title}}</h3>
 
 								<div>
 									{% set notSkilled = 4 - skill.skillLevel %}
